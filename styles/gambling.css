@@ -1,0 +1,33 @@
+.coin {
+    background-color: black;
+
+    .obverse {
+        position: absolute;
+        width: 128px;
+        height: 128px;
+
+        transform: rotate3d(0, 0, 0, -180deg);
+
+        transition: all 0.2s;
+    }
+    .reverse {
+        opacity: 0;
+
+        width: 128px;
+        height: 128px;
+
+        transform: rotate3d(0, 1, 0, 180deg);
+
+        transition: all 0.2s;
+    }
+    &:hover {
+        .obverse {
+            transform: rotate3d(0, 1, 0, -180deg);
+        }
+        .reverse {
+            opacity: 1;
+
+            transform: rotate3d(0, 0, 0, 180deg);
+        }
+    }
+}

@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+:root {
+    --text-color: #fff;
+    --text-lesser-color: #fffb;
+
+    --background-color: #222;
+    --midground-color: #333;
+    --foreground-color: #444;
+
+    --subtle-input: #ffffff07;
+
+    --border-lesser-color: #fff2;
+    --border-color: #fff4;
+    --border-glow-color: #fff6;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    scrollbar-color: var(--foreground-color) #0000;
+    
+}
+
+* {
+}
+
+html {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+#MainUI {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+
+    padding: 4px;
+
+    margin: 4px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.toolBar {
+    display: flex;
+    flex-direction: row;
+}
+.scroll.vertical {
+        overflow-y: scroll;
+}
+.scroll.horizontal {
+        overflow-x: scroll;
+}
+
+h1, h2, h3, h4, h5, .title {
+    font-family: Play, Arial, Helvetica, sans-serif;
+}
+
+.attach {
+    position: absolute;
+
+    margin: 8px;
+
+    &.right {
+        right: 0px;
+    }
+    &.bottom {
+        bottom: 0px;
+    }
+}
+
+.holder {
+    flex-grow: 1;
+}
+.container {
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--midground-color);
+
+    padding: 4px;
+
+    border: solid 1px var(--border-lesser-color);
+    border-radius: 4px;
+}
+.settingName {
+    display: inline;
+}
+
+/* Inputs */
+button {
+    color: var(--text-lesser-color);
+
+    position: relative;
+    min-width: 32px;
+    min-height: 32px;
+    background-color: #0000;
+
+    border: solid 1px var(--border-lesser-color);
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: all 3s ease-out, box-shadow 2s ease-out;
+
+    &:hover {
+        color: var(--text-color);
+
+        border-color: var(--border-color);
+
+        transition: all 0.3s ease-out, box-shadow 0.4s ease-out;
+    }
+    &:active {
+        color: var(--text-color);
+
+        border-color: var(--border-glow-color);
+
+        transition: all 0.1s ease-out, box-shadow 0.2s ease-out;
+    }
+}
+input[type=button] {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background-color: var(--subtle-input);
+
+    border: solid 1px var(--border-lesser-color);
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: all 3s ease-out, box-shadow 2s ease-out;
+
+    &:hover {
+        border-color: var(--border-color);
+
+        transition: all 0.3s ease-out, box-shadow 0.4s ease-out;
+    }
+    &:active {
+        border-color: var(--border-glow-color);
+
+        transition: all 0.1s ease-out, box-shadow 0.2s ease-out;
+    }
+}
+input[type=checkbox] {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background-color: var(--subtle-input);
+
+    border: solid 1px var(--border-lesser-color);
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: all 3s ease-out, box-shadow 2s ease-out;
+
+    &:hover {
+        border-color: var(--border-color);
+
+        transition: all 0.3s ease-out, box-shadow 0.4s ease-out;
+    }
+    &:active {
+        border-color: var(--border-glow-color);
+
+        transition: all 0.1s ease-out, box-shadow 0.2s ease-out;
+    }
+}
+.card {
+    color: var(--text-lesser-color);
+    text-decoration: none;
+
+    display: flex;
+    gap: 4px;
+
+    position: relative;
+    min-width: 32px;
+    width: fit-content;
+    max-width: 512px;
+    min-height: 32px;
+    background-color: #0000;
+
+    padding: 4px;
+
+    border: solid 1px var(--border-color);
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: all 3s ease-out, box-shadow 2s ease-out;
+
+    &:hover {
+        color: var(--text-color);
+
+        background-color: var(--midground-color);
+
+        border-color: var(--border-glow-color);
+
+        transition: all 0.3s ease-out, border 0.4s ease-out;
+    }
+    &:active {
+        color: var(--text-color);
+
+        background-color: #fff0;
+
+        border-color: var(--border-glow-color);
+
+        transition: all 0.1s ease-out, box-shadow 0.2s ease-out;
+    }
+    .subject {
+        display: flex;
+        font-size: 64px;
+        text-align: center;
+        place-items: center;
+
+        position: relative;
+        height: 64px;
+
+        margin: 4px;
+    }
+    .title {
+        display: inline;
+        font-weight: bold;
+        font-size: large;
+
+        position: relative;
+    }
+    .subtitle {
+        display: inline;
+
+        position: relative;
+        min-width: max-content;
+    }
+    .body {
+        word-wrap: break-word;
+
+        position: relative;
+
+        padding-left: 8px;
+    }
+}

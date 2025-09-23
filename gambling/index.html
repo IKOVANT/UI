@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gambling</title>
+        
+        <link rel="stylesheet" href="../styles/base.css">
+        <link rel="stylesheet" href="../styles/gambling.css">
+    </head>
+    <body>
+        <div id="MainUI">
+            <div class="scrollLayer">
+                <h1>IKOVANT Gambling</h1>
+
+                <h2>Gamble:</h2>
+                <button>Lemme gamble!</button>
+                <h3>Inventory:</h3>
+                <div class="container">
+                </div>
+            </div>
+
+            
+            <div class="topLayer">
+                <div class="container attach bottom right">
+                    <p class="settingName">Bloom</p>
+                    <input id="bloomCheckbox" class="settingInput" type="checkbox" onchange="setBloomActive(this.checked)">
+                    <p class="settingName">Bloom strength</p>
+                    <input id="bloomSlider" class="settingInput" type="range" value="33" min="0" max="100" oninput="setBloomStrength(this.value)">
+                </div>
+            </div>
+        </div>
+        <div id="BloomUI"></div>
+
+        <script src="../scripts/base.js"></script>
+        <script src="../scripts/postProcess.js"></script>
+    </body>
+</html>

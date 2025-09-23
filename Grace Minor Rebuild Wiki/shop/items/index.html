@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shop</title>
+        
+        <link rel="stylesheet" href="../../../styles/base.css">
+        <link rel="stylesheet" href="../../../styles/graceRebuild.css">
+    </head>
+    <body>
+        <div id="MainUI">
+            <div class="graceBook">
+                <div class="graceBookInfoPage">Love you</div>
+                <div class="graceBookContentPage">
+                    <div class="graceBookContentPageHeader">
+                        <button>Items</button>
+                        <button>Traits</button>
+                        <button>Documents</button>
+                    </div>
+                    <div class="graceBookContentPageContent">
+                        <div class="graceBookItem">
+                            <img src="../../images/Flashlight.png">
+                            <div class="graceBookItemPrice">0</div>
+                        </div>
+                        <div class="graceBookItem">
+                            <img src="../../images/Lantern.png">
+                            <div class="graceBookItemPrice">100</div>
+                        </div>
+                        <div class="graceBookItem">
+                            <img src="../../images/S.H.A.K.E..png">
+                            <div class="graceBookItemPrice">4000</div>
+                        </div>
+                        <div class="graceBookItem">
+                            <img src="../../images/Doombringer.png">
+                            <div class="graceBookItemPrice">9999</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="topLayer">
+                <div class="container attach bottom right">
+                    <p class="settingName">Bloom</p>
+                    <input id="bloomCheckbox" class="settingInput" type="checkbox" onchange="setBloomActive(this.checked)">
+                    <p class="settingName">Bloom strength</p>
+                    <input id="bloomSlider" class="settingInput" type="range" value="33" min="0" max="100" oninput="setBloomStrength(this.value)">
+                </div>
+            </div>
+        </div>
+        <div id="BloomUI"></div>
+
+        <script src="../../../scripts/base.js"></script>
+        <script src="../../../scripts/postProcess.js"></script>
+    </body>
+</html>
