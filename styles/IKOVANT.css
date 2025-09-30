@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+
+:root {
+    /* Vars */
+    --page-width: calc(256px * 3);
+
+        /* Colours */
+            /* Flavours */
+            --cherry: rgb(220, 22, 55);
+            --cherry-dark: rgb(168, 18, 65);
+            --lemon: rgb(216, 206, 66);
+            --lemon-dark: rgb(189, 164, 4);
+            --lime: rgb(20, 194, 23);
+            --lime-dark: rgb(6, 151, 30);
+            --bubblegum: rgb(247, 140, 158);
+            --bubblegum-dark: rgb(199, 106, 145);
+            --blueberry: rgb(92, 100, 255);
+            --blueberry-dark: rgb(89, 66, 203);
+            --orange: rgb(255, 159, 34);
+            --orange-dark: rgb(206, 123, 22);
+
+        --charcoal: rgb(48, 48, 48);
+        --green-light: rgb(16, 177, 16);
+        --green: rgb(5, 144, 5);
+        --green-dark: rgb(0, 83, 55);
+
+    /* Contents */
+}
+
+.toolBar {
+    position: absolute;
+    left: calc(max(50vw - var(--page-width)/2, 0px));
+    right: calc(max(50vw - var(--page-width)/2, 0px));
+    width: unset;
+    height: 32px;
+
+    padding: 0px;
+}
+.profilePicture {
+    padding: 4px;
+}
+.username {
+    align-content: end;
+    font-size: 16px;
+
+    padding: 4px;
+}
+
+#MainUI {
+    left: calc(max(50vw - var(--page-width)/2, 0px));
+    right: calc(max(50vw - var(--page-width)/2, 0px));
+    top: 32px;
+}
+
+.titleBar {
+    gap: 16px;
+
+    padding-right: 16px;
+
+    margin: 4px;
+}
+.titleIKOVANT {
+    flex-grow: 1;
+
+    font-size: 64px;
+
+    margin: 0px;
+}
+.styleCard {
+    cursor: pointer;
+
+    aspect-ratio: 4/1;
+    text-align: center;
+    place-content: center;
+    color: var(--charcoal);
+    text-shadow: 0px 1px 0px #0004;
+
+    min-width: 256px;
+    background-color: #888;
+    background-size: cover;
+    image-rendering: pixelated;
+
+    border: solid 3px var(--charcoal);
+    border-radius: 0px;
+}
+
+.mainLinksHolder {
+    flex-wrap: wrap;
+
+    perspective: 1000px;
+
+    max-height: min-content;
+}
+.mainLink {
+    flex-grow: 1 ;
+    aspect-ratio: 4/1;
+
+    text-shadow: 0px 1px 0px #0004;
+    font-size: 18px;
+    font-family: Play, Arial, Helvetica, sans-serif;
+
+    background-image: url("../images/noise\ texture\ 128x128\ transparent\ 2.png"),
+        linear-gradient(130deg,
+            #0000 4px,
+            #fff1 8px,
+            #fff1 16px,
+            #0000 20px,
+            #0000 calc(100% - 20px),
+            #fff1 calc(100% - 16px),
+            #fff1 calc(100% - 8px),
+            #0000 calc(100% - 4px)),
+        radial-gradient(at 50% 50%,
+            #fff2,
+            #0000 66%),
+        linear-gradient(180deg,
+            #fff3,
+            #0000 2px,
+            #0000 calc(100% - 2px),
+            #0008 100%),
+        linear-gradient(180deg,
+            var(--charcoal) calc(100% - 4px),
+            #0000 calc(100% - 4px)),
+        radial-gradient(at 50% 100%,
+            #0000,
+            #0006 100%);
+
+    border: solid 0px var(--charcoal);
+    border-radius: 0px;
+
+    box-shadow: inset 0px 0px 2px 0px #000a, inset 0px 0px 4px 0px #fff8;
+
+    filter: contrast(110%);
+
+    transition: all 0.1s;
+    
+    &:hover {
+        box-shadow: inset 0px 0px 2px 0px #000a, inset 0px 0px 4px 0px #fff8, 0px 1px 4px #0008;
+
+        transform: translate3d(0px, 0px, 16px) rotate3d(1, 0, 0, 5deg);
+    }
+}
+.flavour.cherry {
+    background-color: var(--cherry-dark);
+    &:hover {
+        background-color: var(--cherry);
+    }
+}
+.flavour.lemon {
+    background-color: var(--lemon-dark);
+    &:hover {
+        background-color: var(--lemon);
+    }
+}
+.flavour.lime {
+    background-color: var(--lime-dark);
+    &:hover {
+        background-color: var(--lime);
+    }
+}
+.flavour.orange {
+    background-color: var(--orange-dark);
+    &:hover {
+        background-color: var(--orange);
+    }
+}
+.flavour.blueberry {
+    background-color: var(--blueberry-dark);
+    &:hover {
+        background-color: var(--blueberry);
+    }
+}
+.flavour.bubblegum {
+    background-color: var(--bubblegum-dark);
+    &:hover {
+        background-color: var(--bubblegum);
+    }
+}
+
+.mainPage {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--green-dark);
+
+    border: solid 3px var(--charcoal);
+}
+.advertHolder {
+    gap: 4px;
+    flex-wrap: wrap;
+
+    margin: 4px;
+}
+.advert {
+    cursor: pointer;
+
+    flex-grow: 1;
+
+    aspect-ratio: 5/1;
+    text-align: center;
+    place-content: center;
+    color: var(--charcoal);
+    text-shadow: 0px 1px 0px #0004;
+
+    min-width: 256px;
+    background-color: #888;
+    background-size: cover;
+    image-rendering: pixelated;
+
+    border: solid 3px var(--charcoal);
+    border-radius: 0px;
+}
+
+.promotionBox {
+    margin: 4px 32px;
+}
+.READNOW {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-size: 24px;
+    font-family: "Rock Salt";
+    font-weight: bold;
+    color: var(--charcoal);
+
+    margin: 4px 22.5%;
+
+    >:first-child {
+        transform: scaleX(-1) scale(2);
+    }
+    >:last-child {
+        transform: scale(2);
+    }
+}
+.promotionHolder {
+    flex-wrap: wrap;
+    gap: 32px;
+
+    perspective: 1000px;
+}
+.promotion {
+    cursor: pointer;
+
+    aspect-ratio: 4/5;
+
+    flex-grow: 1;
+
+    position: relative;
+
+    background-color: magenta;
+    background-image: url("../images/tile\ Judge\ dark.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: pixelated;
+
+    transition: all 0.1s ease-out;
+
+    &:hover {
+        transform: translate3d(0px, -4px, 64px) rotate3d(1, 0, 0, 5deg);
+
+        box-shadow: 0px 2px 8px #0008;
+
+        transition: all 0.4s cubic-bezier(0.1, 0.7, 0.3, 1.4);
+    }
+}
